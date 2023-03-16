@@ -1,0 +1,54 @@
+﻿@model Review
+
+<div class="rating-form">
+    <h4 class="form-title">Add your Comments</h4>
+
+    <form method="post" asp-controller="product" asp-action="addreview">
+        <div class="rating-star d-flex">
+            <span class="title">Rating:</span>
+            <div class="rating">
+                <input type="radio" id="star5" asp-for="Start" value="5" />
+                <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                <input type="radio" id="star4" asp-for="Start" value="4" />
+                <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                <input type="radio" id="star3" asp-for="Start" value="3" />
+                <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                <input type="radio" id="star2" asp-for="Start" value="2" />
+                <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                <input type="radio" id="star1" asp-for="Start" value="1" />
+                <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="single-form">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" placeholder="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="single-form">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" placeholder="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="single-form">
+                    <label asp-for="Comment">Your Review:</label>
+                    <textarea asp-for=Comment placeholder="Write a review"></textarea>
+                    <span asp-validation-for="Comment" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="single-form">
+                    <button class="main-btn">Add Review</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
