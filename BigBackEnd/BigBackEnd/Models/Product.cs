@@ -38,7 +38,7 @@ namespace BigBackEnd.Models
         public List<ProductTag>? ProductTags { get; set; }
         public List<ProductImage>? ProductImages { get; set; }
         public IEnumerable<Basket>? Baskets { get; set; }
-        public IEnumerable<Review>? Reviews { get; set; }
+        public List<Review>? Reviews { get; set; }
 
         [NotMapped]
         public IFormFile? MainFile { get; set; }

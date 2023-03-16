@@ -3,7 +3,7 @@
 <div class="rating-form">
     <h4 class="form-title">Add your Comments</h4>
 
-    <form method="post" asp-controller="product" asp-action="addreview">
+    <form method="post" asp-controller="product" asp-action="addreview" asp-route-productId="@Model.Product.Id">
         <div class="rating-star d-flex">
             <span class="title">Rating:</span>
             <div class="rating">
