@@ -1,4 +1,17 @@
 ﻿$(document).ready(function () {
+    $('.addbasket').click(function (e) {
+        e.preventDefault();
+
+        let url = $(this).attr('href');
+
+        fetch(url)
+            .then(res => {
+                return res.text();
+
+            }).then(data => {
+                $('.header-cart').html(data)
+            })
+    })
     console.log("test")
     $(document).on("click", '.product-close, .element-delete-trashbin, .basket-product-increase', function (e) {
         e.stopPropagation();
