@@ -1,0 +1,14 @@
+.shopheader {
+  text-align: center;
+}
+.shopheader a {
+  color: white;
+}
+.shopheader a:hover {
+  color: rgb(161, 111, 18);
+  transition: 0.6s;
+}
+.shopheader span {
+  margin: 0 6px;
+  color: white;
+}/*# sourceMappingURL=shop.css.map */
